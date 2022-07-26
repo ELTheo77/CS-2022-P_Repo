@@ -2,6 +2,16 @@
 # Main code for WordleHelper program
 # Implements the command loop and uses a CmdProcessor
 # object to process each of the supported commands
+
+Dict = {}
+with open('words.txt') as f:
+    lines = f.readlines()
+for line in lines:
+    res=line.split()
+    Dict[res[0]]=int(res[1])
+f.close()
+print(Dict)
+
 import CmdProcessor as cp
 
 if __name__ == "__main__":
@@ -28,5 +38,3 @@ if __name__ == "__main__":
             print("#Error: Command not recognized")
         line = input("Command?> ").lower()
     print("Goodbye!")
-
-
