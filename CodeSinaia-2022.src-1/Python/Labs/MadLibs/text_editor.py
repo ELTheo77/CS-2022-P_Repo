@@ -8,14 +8,14 @@ for line in lines:
     rezultat=""
     for word in res:
         if word[0]=='<' or (word[0]=='"' and word[1]=='<'):
-            print("\nSelect a/an ", end="")
+            print("Select a/an ", end="")
             i=1
             while word[i]!='>':
                 print(word[i], end="")
                 i+=1
             print("\n")
             new_word=input()
-            print("\n")
+            print("\n", end="")
             rezultat+=new_word
             i+=1
             while i<len(word):
@@ -25,7 +25,6 @@ for line in lines:
         else:
             rezultat+=word+" "
     text+=rezultat+"\n"
-    print(f'{rezultat}')
-print("\n")
+    #print(f'{rezultat}')
 print(text)
 f.close()
