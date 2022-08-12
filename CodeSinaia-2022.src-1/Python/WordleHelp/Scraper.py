@@ -17,7 +17,7 @@ class Scraper:
     #         if source points to a file on the disk, text is loaded from that file
     #         if source is any other string, text is loaded directly from there
     #         otherwise the text is loaded from the clipboard
-    def __init__(self, source):
+    def __init__(self, source = None):
         # Loads the internal _text from various sources
         if source:
             if source.startswith("http"):
@@ -32,3 +32,4 @@ class Scraper:
 
     def __str__(self):
         return f"Scraped text: '{self._text[0:100]}'"
+

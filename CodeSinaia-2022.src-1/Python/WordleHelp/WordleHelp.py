@@ -12,8 +12,9 @@ if __name__ == "__main__":
         if line == "?" or line == "help":
             cmdProcessor.processHelp()
         elif line.startswith("add"):
-            res=line.split()
-            cmdProcessor.processAdd(res[1])
+            cmdProcessor.processAdd(line)
+        elif line.startswith("print"):
+            cmdProcessor.processPrint(line)
         elif line.startswith("match"):
             cmdProcessor.processMatch(line)
         elif line.startswith("reset"):
